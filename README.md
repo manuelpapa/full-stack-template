@@ -1,3 +1,3 @@
 # full-stack-template
 
-Express server with CRA, ESLint, Git Hoos and Prettier
+Express server with CRA, ESLint, Git Hooks, Prettier & Storybook.
