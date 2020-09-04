@@ -2,19 +2,19 @@
   "name": "full-stack-template",
   "private": true,
   "version": "1.0.0",
-  "description": "Express server with CRA, ESLint, Git Hoos and Prettier",
+  "description": "Express server with CRA, ESLint, Git Hooks and Prettier",
   "main": "server.js",
   "scripts": {
     "postinstall": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "test": "cd client && npm test",
+    "build": "cd client && npm run build && npm run build-storybook",
+    "test": "npm run lint && cd client && npm test",
     "prettify": "prettier --write .",
     "lint": "eslint . --ext .js",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manuelpapa/full-stack-template.git"
+    "url": "git+https://github.com/lmachens/full-stack-template.git"
   },
   "keywords": [],
   "author": "Manuel Papa",
@@ -24,7 +24,21 @@
   },
   "homepage": "https://github.com/manuelpapa/full-stack-template#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.34.0",
